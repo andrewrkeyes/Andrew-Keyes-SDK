@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.andrewkeyes</groupId>
-    <artifactId>lotr</artifactId>
+    <artifactId>lord-of-the-rings-sdk</artifactId>
     <version>1.0.1</version>
     <packaging>jar</packaging>
-    <name>lotr</name>
+    <name>lord-of-the-rings-sdk</name>
 
     <properties>
         <maven.compiler.source>18</maven.compiler.source>
