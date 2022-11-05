@@ -1,7 +1,7 @@
-package com.andrewkeyes.lordoftherings.service.client
+package com.andrewkeyes.lotr.service.client
 
-import com.andrewkeyes.lordoftherings.service.LordOfTheRingsServiceException
-import com.andrewkeyes.lordoftherings.service.model.*
+import com.andrewkeyes.lotr.service.LordOfTheRingsServiceException
+import com.andrewkeyes.lotr.service.model.*
 import com.fasterxml.jackson.databind.ObjectMapper
 import org.slf4j.LoggerFactory
 import java.net.URI
@@ -105,7 +105,11 @@ class LordOfTheRingsClient(
             return mapper.readValue(response.body(), T::class.java)
         } else {
             logger.error("Lord of Rings API returned an error for request ${httpRequest.uri()}. Status code: ${response.statusCode()}. Body: ${response.body()}")
-            throw LordOfTheRingsServiceException(response.statusCode(), response.body(), "Lord of Rings API returned an error for request ${httpRequest.uri()}. Status code: ${response.statusCode()}.")
+            throw com.andrewkeyes.lotr.service.LordOfTheRingsServiceException(
+                response.statusCode(),
+                response.body(),
+                "Lord of Rings API returned an error for request ${httpRequest.uri()}. Status code: ${response.statusCode()}."
+            )
         }
     }
 

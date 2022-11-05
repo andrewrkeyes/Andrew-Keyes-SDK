@@ -1,7 +1,7 @@
-package com.andrewkeyes.lordoftherings.service
+package com.andrewkeyes.lotr.service
 
-import com.andrewkeyes.lordoftherings.service.client.LordOfTheRingsClient
-import com.andrewkeyes.lordoftherings.service.model.*
+import com.andrewkeyes.lotr.service.client.LordOfTheRingsClient
+import com.andrewkeyes.lotr.service.model.*
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import java.net.http.HttpClient
@@ -37,10 +37,10 @@ interface LordOfTheRingsService {
 
     companion object {
 
-        fun builder(apiKey: String): LordOfTheRingsService {
+        fun builder(apiKey: String): com.andrewkeyes.lotr.service.LordOfTheRingsService {
             val client = HttpClient.newHttpClient()
             val lordOfTheRingsClient = LordOfTheRingsClient(client, apiKey, jacksonObjectMapper().registerModule(JavaTimeModule()))
-            return LordOfTheRingsServiceImpl(lordOfTheRingsClient)
+            return com.andrewkeyes.lotr.service.LordOfTheRingsServiceImpl(lordOfTheRingsClient)
         }
     }
 }

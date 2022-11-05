@@ -1,7 +1,7 @@
-package com.andrewkeyes.lordoftherings.service
+package com.andrewkeyes.lotr.service
 
 class LordOfTheRingsServiceException(
     val statusCode: Int,
     val responseBody: String,
     message: String
-): RuntimeException(message = message)
+): RuntimeException(message)

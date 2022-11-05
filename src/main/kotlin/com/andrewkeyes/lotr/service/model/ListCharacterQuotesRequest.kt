@@ -1,6 +1,7 @@
-package com.andrewkeyes.lordoftherings.service.model
+package com.andrewkeyes.lotr.service.model
 
-class ListCharactersRequest(
+class ListCharacterQuotesRequest(
+    val characterId: String,
     limit: Int? = null,
     page: Int? = null,
     offset: Int? = null,

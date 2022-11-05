@@ -1,9 +1,10 @@
-package com.andrewkeyes.lordoftherings.service
+package com.andrewkeyes.lotr.service
 
-import com.andrewkeyes.lordoftherings.service.client.LordOfTheRingsClient
-import com.andrewkeyes.lordoftherings.service.model.*
+import com.andrewkeyes.lotr.service.client.LordOfTheRingsClient
+import com.andrewkeyes.lotr.service.model.*
 
-class LordOfTheRingsServiceImpl(private val lordOfTheRingsClient: LordOfTheRingsClient): LordOfTheRingsService {
+class LordOfTheRingsServiceImpl(private val lordOfTheRingsClient: LordOfTheRingsClient):
+    com.andrewkeyes.lotr.service.LordOfTheRingsService {
 
     override fun listBooks(listBooksRequest: ListBooksRequest): ListResponse<BookResponse> {
         return lordOfTheRingsClient.listBooks(listBooksRequest)

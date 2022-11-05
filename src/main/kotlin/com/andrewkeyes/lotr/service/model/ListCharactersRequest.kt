@@ -1,6 +1,6 @@
-package com.andrewkeyes.lordoftherings.service.model
+package com.andrewkeyes.lotr.service.model
 
-class ListQuotesRequest(
+class ListCharactersRequest(
     limit: Int? = null,
     page: Int? = null,
     offset: Int? = null,
