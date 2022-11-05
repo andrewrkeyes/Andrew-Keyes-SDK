@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.andrewkeyes</groupId>
-    <artifactId>lord-of-the-rings-SDK</artifactId>
+    <artifactId>lord-of-the-rings-sdk</artifactId>
     <version>1.0.0</version>
 
     <properties>
@@ -85,7 +85,7 @@
         <repository>
             <id>github</id>
             <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/andrewrkeyes/lord-of-the-rings-SDK</url>
+            <url>https://maven.pkg.github.com/andrewrkeyes/lord-of-the-rings-sdk</url>
         </repository>
     </distributionManagement>
 
