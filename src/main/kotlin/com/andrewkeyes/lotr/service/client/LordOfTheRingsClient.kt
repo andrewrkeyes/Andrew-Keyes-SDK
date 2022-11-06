@@ -3,6 +3,7 @@ package com.andrewkeyes.lotr.service.client
 import com.andrewkeyes.lotr.service.LordOfTheRingsServiceException
 import com.andrewkeyes.lotr.service.model.*
 import com.fasterxml.jackson.databind.ObjectMapper
+import com.fasterxml.jackson.module.kotlin.readValue
 import org.slf4j.LoggerFactory
 import java.net.URI
 import java.net.http.HttpClient
@@ -105,10 +106,10 @@ class LordOfTheRingsClient(
         val response = client.send(httpRequest, HttpResponse.BodyHandlers.ofString())
 
         if(response.statusCode() in 200..204) {
-            return mapper.readValue(response.body(), T::class.java)
+            return mapper.readValue(response.body())
         } else {
             logger.error("Lord of Rings API returned an error for request ${httpRequest.uri()}. Status code: ${response.statusCode()}. Body: ${response.body()}")
-            throw com.andrewkeyes.lotr.service.LordOfTheRingsServiceException(
+            throw LordOfTheRingsServiceException(
                 response.statusCode(),
                 response.body(),
                 "Lord of Rings API returned an error for request ${httpRequest.uri()}. Status code: ${response.statusCode()}."

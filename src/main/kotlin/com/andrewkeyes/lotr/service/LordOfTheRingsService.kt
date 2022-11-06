@@ -37,10 +37,10 @@ interface LordOfTheRingsService {
 
     companion object {
 
-        fun builder(apiKey: String): com.andrewkeyes.lotr.service.LordOfTheRingsService {
+        fun builder(apiKey: String): LordOfTheRingsService {
             val client = HttpClient.newHttpClient()
             val lordOfTheRingsClient = LordOfTheRingsClient(client, apiKey, jacksonObjectMapper().registerModule(JavaTimeModule()))
-            return com.andrewkeyes.lotr.service.LordOfTheRingsServiceImpl(lordOfTheRingsClient)
+            return LordOfTheRingsServiceImpl(lordOfTheRingsClient)
         }
     }
 }

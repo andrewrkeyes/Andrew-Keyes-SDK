@@ -7,7 +7,7 @@ The library is deployed to Github packages and can be accessed by adding the fol
 <dependency>
   <groupId>com.andrewkeyes</groupId>
   <artifactId>lord-of-the-rings-sdk</artifactId>
-  <version>1.0.4</version>
+  <version>1.0.5</version>
 </dependency>
 ```
 

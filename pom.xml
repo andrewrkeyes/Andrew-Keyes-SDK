@@ -6,7 +6,7 @@
 
     <groupId>com.andrewkeyes</groupId>
     <artifactId>lord-of-the-rings-sdk</artifactId>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <name>lord-of-the-rings-sdk</name>
     <packaging>jar</packaging>
 
