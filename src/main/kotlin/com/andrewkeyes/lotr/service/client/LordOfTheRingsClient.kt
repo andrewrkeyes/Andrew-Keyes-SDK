@@ -86,6 +86,9 @@ class LordOfTheRingsClient(
         listRequest.offset?.let { queryString = "$queryString&offset=${listRequest.offset}" }
         listRequest.page?.let { queryString = "$queryString&page=${listRequest.page}" }
         listRequest.where?.let { queryString = "$queryString&${listRequest.where}" }
+        if(listRequest.sortBy != null && listRequest.sortOrder != null) {
+            queryString = "$queryString&sort=${listRequest.sortBy}:${listRequest.sortOrder}"
+        }
         return queryString.removePrefix("&")
     }
 

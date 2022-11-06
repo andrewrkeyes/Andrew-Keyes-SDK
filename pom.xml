@@ -6,8 +6,9 @@
 
     <groupId>com.andrewkeyes</groupId>
     <artifactId>lord-of-the-rings-sdk</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.4</version>
     <name>lord-of-the-rings-sdk</name>
+    <packaging>jar</packaging>
 
     <properties>
         <maven.compiler.source>18</maven.compiler.source>

@@ -3,8 +3,7 @@ package com.andrewkeyes.lotr.service
 import com.andrewkeyes.lotr.service.client.LordOfTheRingsClient
 import com.andrewkeyes.lotr.service.model.*
 
-class LordOfTheRingsServiceImpl(private val lordOfTheRingsClient: LordOfTheRingsClient):
-    com.andrewkeyes.lotr.service.LordOfTheRingsService {
+class LordOfTheRingsServiceImpl(private val lordOfTheRingsClient: LordOfTheRingsClient): LordOfTheRingsService {
 
     override fun listBooks(listBooksRequest: ListBooksRequest): ListResponse<BookResponse> {
         return lordOfTheRingsClient.listBooks(listBooksRequest)
